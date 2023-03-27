@@ -1,6 +1,42 @@
-h1 {
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
+    url("https://img.freepik.com/free-vector/robot-human_53876-90440.jpg?w=1060&t=st=1679937486~exp=1679938086~hmac=2e3600e07c4c32f1e7ddb3ed0bfb7452b88de77e2d7dbc934a31c44b23e6c363");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  text-decoration: solid;
-  font-size: 50px;
-  font-weight: bolder;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
 }
