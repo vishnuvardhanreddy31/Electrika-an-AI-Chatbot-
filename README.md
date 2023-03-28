@@ -1,11 +1,11 @@
 # openhouse-2k23
 A webapp for an AI chatbot(Electrika) and an AI image generator(Picto)
 # 💫 About Me:
-IHello there! My name is Vishnuvardhan and I'm an undergraduate student. I'm passionate about Python development and I love working with APIs to create exciting projects. While I don't have any professional experience yet, I've been honing my skills for a while and I'm eager to take on new challenges.
+Hello there! My name is Vishnuvardhan and I'm an undergraduate student. I'm passionate about Python development and I love working with APIs to create exciting projects. While I don't have any professional experience yet, I've been honing my skills for a while and I'm eager to take on new challenges.
 
 I'm proficient in core Python as well as HTML, CSS, JavaScript, Bootstrap, Flask, and web scraping. In my free time, I love working on machine learning projects using Flask. I also enjoy playing chess and reading magazines to relax and unwind.
 
-I believe that programming is a powerful tool for problem-solving and creativity, and I enjoy exploring the possibilities that it offers. I'm always looking for new projects to work on and people to collaborate with. If you'd like to learn more about me or discuss a project, feel free to check out my LinkedIn profile at [https://www.linkedin.com/in/vishnuvardhan-reddy-goli]. Thanks for stopping by!
+I believe that programming is a powerful tool for problem-solving and creativity, and I enjoy exploring the possibilities that it offers. I'm always looking for new projects to work on and people to collaborate with. If you'd like to learn more about me or discuss a project, feel free to check out my LinkedIn profile. Thanks for stopping by!
 
 
 ## 🌐 Socials:
