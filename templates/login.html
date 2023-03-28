@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="/login">Login</a>
+  </div>
+
+  <!-- Login page container -->
+  <div class="container login-container">
+    <h1>Login</h1>
+    <form action="/login" method="post">
+      <input type="text" name="username" placeholder="Username"><br>
+      <input type="password" name="password" placeholder="Password"><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+  <!-- Footer -->
+
+  <div class="footer">
+    <p>Chatbot created by Vishnuvardhan Reddy using Open AI api&copy; 2023</p>
+  </div>
+
+
+</body>
+
+</html>
