@@ -5,6 +5,9 @@ body {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
     url("https://img.freepik.com/free-vector/robot-human_53876-90440.jpg?w=1060&t=st=1679937486~exp=1679938086~hmac=2e3600e07c4c32f1e7ddb3ed0bfb7452b88de77e2d7dbc934a31c44b23e6c363");
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navigation bar */
@@ -25,7 +28,9 @@ body {
   background-color: #ddd;
   color: black;
 }
-
+.error {
+  color: red;
+}
 /* Chatbot container */
 .container {
   margin-top: auto;
@@ -50,14 +55,14 @@ body {
 }
 
 .user-message {
-  background-color: #868e96;
+  background-color: rgba(33, 37, 41, 0.7);
   padding: 10px;
   border-radius: 5px;
   color: #fff;
 }
 
 .ai-message {
-  background-color: #e6e6e6;
+  background-color: rgba(230, 230, 230, 0.9);
   padding: 10px;
   border-radius: 5px;
 }
@@ -95,7 +100,8 @@ input[type="submit"]:hover {
   color: #fff;
   text-align: center;
   padding: 10px;
-  position: fixed;
+  /* position: fixed; */
+  margin-top: auto;
   bottom: 0;
   width: 100%;
 }

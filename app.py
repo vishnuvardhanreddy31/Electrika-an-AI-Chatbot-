@@ -1,6 +1,8 @@
 
+import os
+from dotenv.main import load_dotenv
 import openai
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template,redirect
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -16,14 +18,34 @@ class user_details(db.Model):
     password = db.Column(db.String(20),nullable=False)
     
 # Set up OpenAI API credentials
-openai.api_key ="API_KEY"
+load_dotenv()
+openai.api_key =os.environ.get('API_KEY')
 
 # Set up OpenAI completion engine
 engine_id = "text-davinci-003"
 
 history = []
 
-@app.route('/')
+# Login page
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # Get the username and password from the form
+        username = request.form['username']
+        password = request.form['password']
+        
+        # Check if the username and password are correct
+        if username == 'electrika' and password == 'test@electrika':
+            # If the login is successful, redirect to the home page
+            return redirect('/home')
+        else:
+            # If the login is unsuccessful, render the login page with an error message
+            return render_template('login.html', error='Invalid username or password')
+    else:
+        # If the request method is GET, render the login page
+        return render_template('login.html')
+
+@app.route('/home')
 def index():
     # Render the template with the chat history
     return render_template('index.html', history=history)
@@ -53,17 +75,17 @@ def message():
     # Render the template with the updated chat history
     return render_template('index.html', history=history)
 
-@app.route("/login",methods=['GET','POST'])
-def home():
-  if request.method=='POST':
-    email=request.form.get('username')
-    password=request.form.get('password')
+# @app.route("/login",methods=['GET','POST'])
+# def home():
+#   if request.method=='POST':
+#     email=request.form.get('username')
+#     password=request.form.get('password')
     
-    entry=user_details(email=email,password=password)
-    db.session.add(entry)
-    db.session.commit()
-  return render_template("login.html")
+#     entry=user_details(email=email,password=password)
+#     db.session.add(entry)
+#     db.session.commit()
+#   return render_template("login.html")
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0')
