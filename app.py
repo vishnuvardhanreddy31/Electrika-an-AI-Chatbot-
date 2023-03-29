@@ -29,21 +29,65 @@ history = []
 # Login page
 @app.route('/', methods=['GET', 'POST'])
 def login():
+    # if request.method == 'POST':
+    #     # Get the username and password from the form
+    #     username = request.form['username']
+    #     password = request.form['password']
+        
+    #     # Check if the username and password are correct
+    #     if username == 'electrika' and password == 'test@electrika':
+    #         # If the login is successful, redirect to the home page
+    #         return redirect('/home')
+    #     else:
+    #         # If the login is unsuccessful, render the login page with an error message
+    #         return render_template('login.html', error='Invalid username or password')
+    # else:
+    #     # If the request method is GET, render the login page
+    #     return render_template('login.html')
     if request.method == 'POST':
         # Get the username and password from the form
-        username = request.form['username']
+        email = request.form['username']
         password = request.form['password']
-        
-        # Check if the username and password are correct
-        if username == 'electrika' and password == 'test@electrika':
+
+        # Check if the email and password are correct
+        user = user_details.query.filter_by(email=email, password=password).first()
+        if user:
             # If the login is successful, redirect to the home page
             return redirect('/home')
         else:
             # If the login is unsuccessful, render the login page with an error message
-            return render_template('login.html', error='Invalid username or password')
+            return render_template('login.html', error='Invalid email or password')
     else:
         # If the request method is GET, render the login page
         return render_template('login.html')
+
+
+# User registration page
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        # Get the email and password from the form
+        email = request.form['username']
+        password = request.form['password']
+
+        # Check if the email already exists in the database
+        user = user_details.query.filter_by(email=email).first()
+        if user:
+            # If the email already exists, render the register page with an error message
+            return render_template('register.html', error='User already exists please login')
+        else:
+            # If the email does not exist, add the user to the database and redirect to the login page
+            new_user = user_details(email=email, password=password)
+            db.session.add(new_user)
+            db.session.commit()
+            return redirect('/')
+    else:
+        # If the request method is GET, render the register page
+        return render_template('register.html')
+
+
+
+
 
 @app.route('/home')
 def index():
