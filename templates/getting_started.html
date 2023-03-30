@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <title>Electrika</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="column1">
+                <h1>Electrika An AI Chatbot</h1>
+                <!-- <p>An AI Chatbot designed especially to answer questions related to Electronics and Communications</p> -->
+                <p>Looking for a smarter way to get answers to your electronics questions? Meet Electrika, the
+                    AI-powered chatbot that specializes in providing accurate and comprehensive answers to all your
+                    electronics-related queries.
+                </p>
+                <p>Experience the world of Artificial Intelligence</p>
+                <br>
+                <br>
+                <br>
+                <a href="{{ url_for('login') }}"><button type="button" class="getstarted">Try Now</button></a>
+                <a href="{{ url_for('about_electrika') }}"><button type="button" class="knowmore">Know More</button></a>
+
+
+            </div>
+            <!-- <div class="column2">
+                <img src="https://www.hmablogs.com/wp-content/uploads/2022/06/banner-img.png" alt="banner"
+                    width="500px">
+            </div> -->
+        </div>
+    </div>
+
+
+</body>
+
+</html>

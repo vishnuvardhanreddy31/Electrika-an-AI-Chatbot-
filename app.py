@@ -26,8 +26,11 @@ engine_id = "text-davinci-003"
 
 history = []
 
+@app.route('/')
+def landing_page():
+    return render_template('getting_started.html')
 # Login page
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     # if request.method == 'POST':
     #     # Get the username and password from the form
@@ -80,7 +83,7 @@ def register():
             new_user = user_details(email=email, password=password)
             db.session.add(new_user)
             db.session.commit()
-            return redirect('/')
+            return redirect('/login')
     else:
         # If the request method is GET, render the register page
         return render_template('register.html')
@@ -130,6 +133,18 @@ def message():
 #     db.session.commit()
 #   return render_template("login.html")
 
+@app.route("/picto", methods=["GET", "POST"])
+def picto():
+    if request.method == "POST":
+        prompt = request.form["prompt"]
+        response = openai.Image.create(prompt=prompt, n=2, size="256x256")
+        url = response.data[0].url
+        return render_template("result.html", url=url, prompt=prompt)
+    return render_template("picto.html")
+
+@app.route("/about")
+def about_electrika():
+    return render_template("about.html")
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=True)

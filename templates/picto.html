@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PICTO - AI Image Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='picto_style.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>PICTO - AI Image Generator</h1>
+    <p>Enter a prompt to generate an image:</p>
+    <form method="post">
+      <input type="text" name="prompt" placeholder="e.g. a painting of a bird in the forest">
+      <input type="submit" value="Generate">
+    </form>
+    <h2>Examples:</h2>
+    <ul>
+      <li>a painting of a bird in the forest</li>
+      <li>an astronaut floating in space</li>
+      <li>a pink flamingo wearing sunglasses</li>
+    </ul>
+  </div>
+</body>
+
+</html>

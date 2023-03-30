@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   /* background-color: #f0f0f0; */
   background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
-    url("https://img.freepik.com/free-vector/robot-human_53876-90440.jpg?w=1060&t=st=1679937486~exp=1679938086~hmac=2e3600e07c4c32f1e7ddb3ed0bfb7452b88de77e2d7dbc934a31c44b23e6c363");
+    url("https://live.staticflickr.com/65535/52780840744_8bd48569aa.jpg");
   margin: 0;
   /* min-height: 100vh;
   display: flex;
@@ -43,7 +43,7 @@ body {
   padding: 20px;
   /* background-color: #fff; */
   background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
-    url("https://img.freepik.com/free-vector/robot-human_53876-90440.jpg?w=1060&t=st=1679937486~exp=1679938086~hmac=2e3600e07c4c32f1e7ddb3ed0bfb7452b88de77e2d7dbc934a31c44b23e6c363");
+    url("https://live.staticflickr.com/65535/52780840744_8bd48569aa.jpg");
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
@@ -276,4 +276,13 @@ footer .bottom-details .bottom_text {
 }
 #tit {
   color: #ddd;
+}
+.login-container,
+.reg-container {
+  height: 100vh;
+  background: center;
+}
+.container {
+  background: center;
+  height: 100vh;
 }

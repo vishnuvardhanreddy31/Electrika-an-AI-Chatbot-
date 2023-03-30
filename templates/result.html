@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PICTO - AI Image Generator - Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='picto_style.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Result for "{{ prompt }}"</h1>
+    <img src="{{ url }}" alt="Generated Image">
+    <a href="/">Generate another image</a>
+  </div>
+</body>
+
+</html>
