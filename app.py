@@ -27,6 +27,10 @@ engine_id = "text-davinci-003"
 history = []
 
 @app.route('/')
+def loading():
+    return render_template('loading.html')
+
+@app.route('/landingpage')
 def landing_page():
     return render_template('getting_started.html')
 # Login page
@@ -147,4 +151,4 @@ def about_electrika():
     return render_template("about.html")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0')
