@@ -1,4 +1,4 @@
-# openhouse-2k23
+# Electrika an AI chatbot 
 A webapp for an AI chatbot(Electrika) and an AI image generator(Picto)
 # 💫 About Me:
 Hello there! My name is Vishnuvardhan and I'm an undergraduate student. I'm passionate about Python development and I love working with APIs to create exciting projects. While I don't have any professional experience yet, I've been honing my skills for a while and I'm eager to take on new challenges.
